@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+        <Text text="Chat">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font></Text>
+        <TextArea fx:id="chatTextArea" editable="false" maxHeight="850.0" minHeight="-Infinity" prefHeight="200.0" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></TextArea>
+        <HBox alignment="BOTTOM_CENTER">
+            <TextField fx:id="messageField" onKeyReleased="#enterReleased"  promptText="Your message" HBox.hgrow="ALWAYS">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <HBox.margin>
+            <Insets right="1.0" />
+         </HBox.margin></TextField>
+            <Button onAction="#clickSendButton" text="Send">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+        </HBox>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>
