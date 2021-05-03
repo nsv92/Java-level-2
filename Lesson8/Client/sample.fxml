@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controller">
+    <HBox fx:id="loginPanel">
+        <TextField fx:id="usernameField" onAction="#login" promptText="Enter your nickname" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin></TextField>
+        <Button onAction="#login" text="Login" />
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+    </HBox>
+    <HBox>
+        <TextArea fx:id="msgArea" editable="false" VBox.vgrow="ALWAYS" />
+        <VBox>
+         <Button fx:id="logoutButton" onAction="#logout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Logout">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" />
+            </VBox.margin>
+         </Button>
+            <ListView fx:id="clientList" maxWidth="100" minWidth="100" prefWidth="100" />
+        </VBox>
+    </HBox>
+    <HBox fx:id="msgPanel" alignment="BOTTOM_LEFT" managed="false" visible="false">
+        <TextField fx:id="msgField" onAction="#sendMsg" promptText="Enter your message" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin></TextField>
+        <Button onAction="#sendMsg" text="Send" />
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+    </HBox>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
